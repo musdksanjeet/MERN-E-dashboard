@@ -20,25 +20,25 @@ jobs:
       
       - name: Install dependencies for Backend
         run: |
-          cd mern-app-server
+          cd backend
           npm install
       
       - name: Install dependencies for Frontend
         run: |
-          cd MERN-E-dashboard
+          cd frontend
           npm install
 
       - name: Build Frontend
         run: |
-          cd MERN-E-dashboard
+          cd frontend
           npm run build
 
       # Copy build folder from frontend to the backend's public directory
       - name: Copy frontend build to backend
         run: |
-          cp -r MERN-E-dashboard/build/* mern-app-server/public/
+          cp -r frontend/build/* backend/public/
 
       - name: Deploy Backend
         run: |
-          cd MERN-E-dashboard
+          cd backend
           npm start
