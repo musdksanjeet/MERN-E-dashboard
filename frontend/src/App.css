@@ -3,6 +3,27 @@
   padding: 10px;
 }
 
+ul.nav-li {
+margin-top: 0px;
+padding: 0px;
+background-color: skyblue;
+}
+ul.nav-li a {
+  text-decoration: auto;
+  color: #1e3a2d;
+  font-size: 20px;
+  font-family: ui-monospace;
+}
+.footer {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  background-color:skyblue;
+  
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
