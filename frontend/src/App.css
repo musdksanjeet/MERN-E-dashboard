@@ -61,6 +61,19 @@ ul.nav-li a {
   border-color: #87ceeb;
 }
 
+.nav-list
+{
+  text-align: right;
+}
+
+.logo{
+  width: 150px;
+  float: left;
+  border-radius: 52px;
+  margin-top: -9px;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
