@@ -1,12 +1,39 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
+import {useNavigate} from 'react-router-dom';
 
 const SignUp = ()=>{
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const navigate = useNavigate();
+    
+    useEffect(()=>{
+        const auth = localStorage.getItem('user');
+        if(auth){
+            navigate('/');
+        }
+    
+    });
 
-    const collectData =()=>{
-        console.log(name,email,password);
+    const collectData = async()=>{
+        // console.log(name,email,password);
+
+        const response = await fetch('http://localhost:5000/register', {
+            method: 'POST',
+            body: JSON.stringify({ name, email, password }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        const result = await response.json();  
+        if (result && result.success) {
+            localStorage.setItem('user',JSON.stringify(result));
+            navigate('/');
+        } else {
+            alert("Registration failed: " + result.message);
+        }
+
     }
     return(
         <div className="register-page">
