@@ -25,6 +25,18 @@ ul.nav-li a {
 .register-page{
   margin-left: 30%;
 }
+
+.login-page{
+  margin-left: 30%;
+}
+.login-input{
+  display: block;
+  margin: 10px;
+  width: 30%;
+  border-radius: 8px;
+  border: 2px solid #87ceeb;
+  padding: 10px;
+}
 .register-input{
   display: block;
   margin: 10px;
@@ -32,6 +44,14 @@ ul.nav-li a {
   border-radius: 8px;
   border: 2px solid #87ceeb;
   padding: 10px;
+}
+
+.login-btn{
+  background: #87ceeb;
+  color: #000000;
+  font-size: 23px;
+  border-radius: 14px;
+  border-color: #87ceeb;
 }
 .register-btn{
   background: #87ceeb;
