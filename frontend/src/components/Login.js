@@ -9,9 +9,9 @@ const Login = ()=>{
    
     useEffect(()=>{
         const auth = localStorage.getItem('user');
-            if(auth){
-                navigate('/');
-            }
+        if(auth){
+            navigate('/');
+        }
     });
 
     const loginData = async()=>{
